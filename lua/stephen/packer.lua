@@ -49,6 +49,8 @@ return require('packer').startup(function(use)
 		end,
 	}
 
+    use('sbdchd/neoformat')
+
 	-- Autocompletion
 	use({
 		'hrsh7th/nvim-cmp',
