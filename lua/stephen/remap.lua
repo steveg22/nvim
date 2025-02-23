@@ -21,6 +21,7 @@ vim.keymap.set("n", "Q", "<nop>")
 
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
+-- https://www.reddit.com/r/neovim/comments/1bftq35/do_you_guys_remap_p_to_dp/
 
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
