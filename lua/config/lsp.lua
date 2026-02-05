@@ -1,12 +1,14 @@
 --Lua.diagnostics.globals`: add element `"vim"
 
 -- Get the lsp configs listed in /after/lua
-local lsp_configs = {}
-for _, f in pairs(vim.api.nvim_get_runtime_file("after/lsp/*.lua", true)) do
-  local server_name = vim.fn.fnamemodify(f, ':t:r')
-  table.insert(lsp_configs, server_name)
-end
-vim.lsp.enable(lsp_configs)
+-- local lsp_configs = {}
+-- for _, f in pairs(vim.api.nvim_get_runtime_file("after/lsp/*.lua", true)) do
+--   local server_name = vim.fn.fnamemodify(f, ':t:r')
+--   table.insert(lsp_configs, server_name)
+-- end
+-- vim.lsp.enable(lsp_configs)
+
+vim.lsp.enable({ "gopls", "lua_ls", "bashls" })
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('my.lsp', {}),
